@@ -20,5 +20,5 @@ ng client parameters
 ng generate class class-name
 ng generate module module-name
 ng generate component component-name
-ng generate service
+ng generate service service-name
 ng new application-name

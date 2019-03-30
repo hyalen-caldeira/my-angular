@@ -1,5 +1,9 @@
 <div>
   <h1>I'm in BlogList</h1>
 </div>
-<app-blog-post-tile title="Blog Title Example 1" subtitle="Blog Subtitle Example"></app-blog-post-tile>
-<app-blog-post-tile title="Blog Title Example 2" subtitle="Blog Subtitle Example"></app-blog-post-tile>
+<!-- <app-blog-post-tile title="Blog Title Example 1" subtitle="Blog Subtitle Example"></app-blog-post-tile> -->
+<app-blog-post-tile *ngFor="let blogPost of blogPosts" [post]="blogPost">
+</app-blog-post-tile>
+<!-- <div *ngFor="let blogPost of blogPosts">
+  <app-blog-post-tile post=blogPost></app-blog-post-tile>
+</div> -->
