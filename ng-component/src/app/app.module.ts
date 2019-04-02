@@ -7,12 +7,16 @@ import { BlogListComponent } from './blog-list/blog-list.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CustomMaterialModule } from './custom-material/custom-material.module';
 import { FormsModule } from '@angular/forms';
+import { TruncatePipe } from './truncate.pipe';
+import { PaginatorComponent } from './paginator/paginator.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BlogPostTileComponent,
-    BlogListComponent
+    BlogListComponent,
+    TruncatePipe,
+    PaginatorComponent
   ],
   imports: [
     BrowserModule, // Must be the first imported. For modules the order matters
@@ -20,7 +24,9 @@ import { FormsModule } from '@angular/forms';
     FormsModule,
     CustomMaterialModule
   ],
-  providers: [],
+  providers: [
+    TruncatePipe
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
