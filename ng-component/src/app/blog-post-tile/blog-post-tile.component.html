@@ -1,24 +1,21 @@
-<div>
-    <mat-card class="example-card">
-        <mat-card-header>
-            <div mat-card-avatar class="example-header-image"></div>
-            <mat-card-title>{{post.title}}</mat-card-title>
-            <mat-card-subtitle>{{post.subtitle}}</mat-card-subtitle>
-        </mat-card-header>
-        <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
-        <mat-card-content>
-            <p (click)="showFullSummary()"> 
-                {{post.summary}}
-                <!--
+<mat-card class="example-card blog-tile">
+    <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>{{post.title}}</mat-card-title>
+        <mat-card-subtitle>{{post.subtitle}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+    <mat-card-content>
+        <p (click)="showFullSummary()">
+            {{post.summary}}
+            <!--
                     In case you don't implement pipe into controller 
                     {{post.summary | truncate:[30]}} 
                 -->
-            </p>
-        </mat-card-content>
-        <mat-card-actions>
-            <button mat-raised-button>LIKE</button>
-            <button mat-raised-button>SHARE</button>
-        </mat-card-actions>
-    </mat-card>
-    <p></p>
-</div>
+        </p>
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-raised-button>LIKE</button>
+        <button mat-raised-button>SHARE</button>
+    </mat-card-actions>
+</mat-card>

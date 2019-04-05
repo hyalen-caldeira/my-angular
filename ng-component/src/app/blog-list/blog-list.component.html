@@ -1,10 +1,17 @@
 <h1>I'm in BlogList</h1>
-<app-blog-post-tile *ngFor="let blogPost of blogPosts; index as i" [post]="blogPost"></app-blog-post-tile>
+<div>
+  <a href="#" (click)="expandAll()">Expand All</a>
+</div>
+<app-blog-post-tile #tile *ngFor="let blogPost of blogPosts; index as i" [post]="blogPost"></app-blog-post-tile>
 <!-- <app-paginator></app-paginator> -->
+<!-- <mat-paginator 
+  [length]="length" 
+  [pageSize]="pageSize" 
+  [pageSizeOptions]="pageSizeOptions" (page)="pageEvent = $event"> -->
 <mat-paginator 
   [length]="length" 
   [pageSize]="pageSize" 
-  [pageSizeOptions]="pageSizeOptions" (page)="pageEvent = $event">
+  [pageSizeOptions]="pageSizeOptions" (page)="pageEvent($event)">
 </mat-paginator>
 <div *ngIf="pageEvent">
   <h5>Page Change Event Properties</h5>

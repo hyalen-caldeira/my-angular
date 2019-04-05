@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChildren, QueryList } from '@angular/core';
 import { BlogPost } from '../blog-post';
 import { PageEvent } from '@angular/material';
+import { BlogPostTileComponent } from '../blog-post-tile/blog-post-tile.component';
+import { BlogDataService } from '../blog-data.service';
 
 @Component({
   selector: 'app-blog-list',
@@ -15,12 +17,22 @@ export class BlogListComponent implements OnInit {
   pageSize : number = 2;
   pageSizeOptions : number[] = [5, 10, 25, 100];
 
-  pageEvent : PageEvent;
+  @ViewChildren('tile') blogPostTileComponents : QueryList<BlogPostTileComponent>;
 
-  constructor() { }
+  // pageEvent : PageEvent;
+  pageEvent(event : PageEvent) {
+    console.log("Estou aqui ...");
+  }
+
+  constructor(private blogData : BlogDataService) { }
+
+  expandAll() {
+    this.blogPostTileComponents.forEach(postTile => postTile.showFullSummary());
+  }
 
   ngOnInit() {
-    this.blogPosts = 
+    this.blogPosts = this.blogData.getData();
+    /*  
       [
         {title : "Blog Title Example 1.1",
         subtitle: "Blog Subtitle Example 1.1",
@@ -73,7 +85,7 @@ export class BlogListComponent implements OnInit {
         A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
         bred for hunting.`}
       ];
-
+    */
     // this.blogPosts.push(
     //   new BlogPost(
     //     "Blog Title Example 1",
@@ -88,8 +100,6 @@ export class BlogListComponent implements OnInit {
     //     `The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
     //      A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
     //      bred for hunting.`));
-
-
   }
 
 }
