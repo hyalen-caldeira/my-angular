@@ -1,11 +1,11 @@
-<mat-card class="example-card blog-tile">
+<mat-card class="example-card blog-tile" [ngClass]="{'favorite' : post.favorite}">
     <mat-card-header>
         <div mat-card-avatar class="example-header-image"></div>
         <mat-card-title>{{post.title}}</mat-card-title>
         <mat-card-subtitle>{{post.subtitle}}</mat-card-subtitle>
     </mat-card-header>
     <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
-    <mat-card-content>
+    <mat-card-content appHighlight>
         <p (click)="showFullSummary()">
             {{post.summary}}
             <!--
@@ -17,5 +17,9 @@
     <mat-card-actions>
         <button mat-raised-button>LIKE</button>
         <button mat-raised-button>SHARE</button>
+        <button mat-raised-button (click)="toggleFavorite()">Favorite</button>
     </mat-card-actions>
 </mat-card>
+<app-content>
+    <h1>I'm here ...</h1>
+</app-content>

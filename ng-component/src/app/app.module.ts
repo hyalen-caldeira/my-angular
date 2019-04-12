@@ -9,6 +9,8 @@ import { CustomMaterialModule } from './custom-material/custom-material.module';
 import { FormsModule } from '@angular/forms';
 import { TruncatePipe } from './truncate.pipe';
 import { PaginatorComponent } from './paginator/paginator.component';
+import { HighlightDirective } from './highlight.directive';
+import { ContentComponent } from './content/content.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { PaginatorComponent } from './paginator/paginator.component';
     BlogPostTileComponent,
     BlogListComponent,
     TruncatePipe,
-    PaginatorComponent
+    PaginatorComponent,
+    HighlightDirective,
+    ContentComponent
   ],
   imports: [
     BrowserModule, // Must be the first imported. For modules the order matters

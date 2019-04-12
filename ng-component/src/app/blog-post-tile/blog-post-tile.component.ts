@@ -28,4 +28,8 @@ export class BlogPostTileComponent implements OnInit {
   showFullSummary() {
     this.post.summary = this.fullSummary;
   }
+
+  toggleFavorite() {
+    this.post.favorite = !this.post.favorite;
+  }
 }
