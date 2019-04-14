@@ -1,10 +1,10 @@
 # my-angular
 
-Angular Material
-mat-input
-mat-card
-mat-raised-button
-mat-paginator
+### Angular Material ###
+  * mat-input
+  * mat-card
+  * mat-raised-button
+  * mat-paginator
 
 It was created an example (paginator component) showing up how to trigger an event from a child component to his parent
 
@@ -18,13 +18,13 @@ Attribute Directivies
 Using View Encapsulation
 encapsulation: ViewEncapsulation.None
 
-Directivies
-ngModel
-ngModelChange
-ng-content
-*ngFor
-*ngIf
-ngClass --> Can be used to apply styles to the tag accoring to the boolean values. You can use this directive instead of *ngIf
+### Directivies ###
+  * ngModel
+  * ngModelChange
+  * ng-content
+  * *ngFor
+  * *ngIf
+    * ngClass --> Can be used to apply styles to the tag accoring to the boolean values. You can use this directive instead of *ngIf
 
 Created the following components
 blog-list
