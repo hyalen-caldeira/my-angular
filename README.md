@@ -44,7 +44,8 @@ ng generate module module-name
 ng generate component component-name
 ng generate service service-name
 ng generate pipe pipe-name
-ng generate directive directive-name
 Pipes are treated as a component and must be imported in app.module.ts and decrarated in declarations array
 To inject pipes as we do with services, you must also to insert the pipe-name in providers array into app.module.ts. Then you can inject it in constructor of any class
 ng new application-name
+ng generate directive directive-name
+ng test
